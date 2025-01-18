@@ -14,14 +14,14 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Apparare.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> APPARARE_ITEMS_TAB = CREATIVE_MODE_TABS.register("apparare_items_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TESTITEM.get()))
+    public static final RegistryObject<CreativeModeTab> APPARARE_ITEMS_TAB = CREATIVE_MODE_TABS.register("apparare_items_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TEST_ITEM.get()))
             .title(Component.translatable("creativetab.apparare_items_tab"))
             .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModItems.TESTITEM.get());
+                output.accept(ModItems.TEST_ITEM.get());
             })
             .build());
 
-    public static final RegistryObject<CreativeModeTab> APPARARE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("apparare_blocks_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TESTITEM.get()))
+    public static final RegistryObject<CreativeModeTab> APPARARE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("apparare_blocks_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TEST_ITEM.get()))
             .title(Component.translatable("creativetab.apparare_blocks_tab"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModBlocks.TEST_BLOCK.get());

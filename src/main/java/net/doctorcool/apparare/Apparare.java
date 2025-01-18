@@ -50,7 +50,7 @@ public class Apparare {
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         //if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-         //   event.accept(ModItems.TESTITEM); //Adds TestItem to ingredients creative tab
+         //   event.accept(ModItems.test_item); //Adds Test_Item to ingredients creative tab
         //}
     }
 
