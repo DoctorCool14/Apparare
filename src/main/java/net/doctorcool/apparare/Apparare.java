@@ -1,6 +1,9 @@
 package net.doctorcool.apparare;
 
 import com.mojang.logging.LogUtils;
+import net.doctorcool.apparare.item.ModCreativeModeTabs;
+import net.doctorcool.apparare.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,14 +28,14 @@ public class Apparare {
     {
         IEventBus modEventBus = context.getModEventBus();
 
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus); //Registers DeferredRegister
 
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(this::commonSetup); // Register the commonSetup method for modloading
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
+
+        MinecraftForge.EVENT_BUS.register(this); // Register ourselves for server and other game events we are interested in
+        modEventBus.addListener(this::addCreative);  // Register the item to a creative tab
 
     }
 
@@ -44,7 +47,9 @@ public class Apparare {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        //if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+         //   event.accept(ModItems.TESTITEM); //Adds TestItem to ingredients creative tab
+        //}
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
