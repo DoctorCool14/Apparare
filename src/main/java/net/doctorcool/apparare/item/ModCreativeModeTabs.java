@@ -1,6 +1,7 @@
 package net.doctorcool.apparare.item;
 
 import net.doctorcool.apparare.Apparare;
+import net.doctorcool.apparare.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,6 +18,13 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creativetab.apparare_items_tab"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModItems.TESTITEM.get());
+            })
+            .build());
+
+    public static final RegistryObject<CreativeModeTab> APPARARE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("apparare_blocks_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TESTITEM.get()))
+            .title(Component.translatable("creativetab.apparare_blocks_tab"))
+            .displayItems((itemDisplayParameters, output) -> {
+                output.accept(ModBlocks.TEST_BLOCK.get());
             })
             .build());
 

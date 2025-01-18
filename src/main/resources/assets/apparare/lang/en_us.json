@@ -1,4 +1,8 @@
 {
   "item.apparare.testitem": "Test Item",
-  "creativetab.apparare_items_tab": "Apparare Items"
+
+  "block.apparare.test_block": "Test Block",
+
+  "creativetab.apparare_items_tab": "Apparare: Items",
+  "creativetab.apparare_blocks_tab": "Apparare: Blocks"
 }

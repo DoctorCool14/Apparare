@@ -1,6 +1,7 @@
 package net.doctorcool.apparare;
 
 import com.mojang.logging.LogUtils;
+import net.doctorcool.apparare.block.ModBlocks;
 import net.doctorcool.apparare.item.ModCreativeModeTabs;
 import net.doctorcool.apparare.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -30,6 +31,7 @@ public class Apparare {
 
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus); //Registers DeferredRegister
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup); // Register the commonSetup method for modloading
 
