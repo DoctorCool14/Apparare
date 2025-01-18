@@ -19,7 +19,7 @@ public class ModBlocks {
                 DeferredRegister.create(ForgeRegistries.BLOCKS, Apparare.MOD_ID);
 
     public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK))); //Creates a new block, copying the properties of bedrock (Can override properties by adding .sound(), etc.). Can replace copy with of to create unique properties such as sounds, map color, etc.
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT))); //Creates a new block, copying the properties of bedrock (Can override properties by adding .sound(), etc.). Can replace copy with of to create unique properties such as sounds, map color, etc.
 
 
 
