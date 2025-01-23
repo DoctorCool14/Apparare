@@ -21,7 +21,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT))); //Creates a new block, copying the properties of bedrock (Can override properties by adding .sound(), etc.). Can replace copy with of to create unique properties such as sounds, map color, etc.
 
-
+    public static final RegistryObject<Block> MUDCLAY_BLOCK = registerBlock("mudclay_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CLAY)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block); //registers block

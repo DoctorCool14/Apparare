@@ -17,7 +17,9 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> APPARARE_ITEMS_TAB = CREATIVE_MODE_TABS.register("apparare_items_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TEST_ITEM.get()))
             .title(Component.translatable("creativetab.apparare_items_tab"))
             .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModItems.TEST_ITEM.get());
+                output.accept(ModItems.COKE.get());
+                output.accept(ModItems.MUDCLAY_BALL.get());
+                output.accept(ModItems.RAW_URANIUM.get());
             })
             .build());
 
@@ -25,6 +27,7 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creativetab.apparare_blocks_tab"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModBlocks.TEST_BLOCK.get());
+                output.accept(ModBlocks.MUDCLAY_BLOCK.get());
             })
             .build());
 

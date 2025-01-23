@@ -7,6 +7,7 @@ import net.doctorcool.apparare.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -32,6 +33,7 @@ public class Apparare {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus); //Registers DeferredRegister
         ModBlocks.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup); // Register the commonSetup method for modloading
 

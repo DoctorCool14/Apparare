@@ -1,7 +1,11 @@
 {
   "item.apparare.test_item": "Test Item",
+  "item.apparare.raw_uranium": "Raw Uranium",
+  "item.apparare.coke": "Coke",
+  "item.apparare.mudclay_ball": "Mud-Clay Ball",
 
   "block.apparare.test_block": "Test Block",
+  "block.apparare.mudclay_block": "Mud-Clay",
 
   "creativetab.apparare_items_tab": "Apparare: Items",
   "creativetab.apparare_blocks_tab": "Apparare: Blocks"

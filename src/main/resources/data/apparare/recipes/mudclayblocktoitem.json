@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "apparare:mudclay_block"
+    }
+  ],
+  "result": {
+    "item": "apparare:mudclay_ball",
+    "count": 9
+  }
+}
